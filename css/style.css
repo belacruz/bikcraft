@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
+  height: 2000px;
 }
 
 h1,
@@ -53,6 +54,8 @@ img {
   display: inline-block;
   font-size: 18px;
   position: relative;
+  font-family: 'Poppins';
+  font-weight: 400;
 }
 
 .header-menu a::after {
@@ -70,37 +73,10 @@ img {
   width: 100%;
 }
 
-@media (width <= 800px) {
-  .header-menu {
-    gap: 20px;
-  }
-  .header-menu a {
-    background: #111111;
-    padding: 12px 16px;
-    border-radius: 4px;
-  }
-  .header-menu a:hover {
-    background: #2e2e2e;
-  }
-
-  .header a::after {
-    display: none;
-  }
-}
-
-@media (width <= 600px) {
-  .header-menu {
-    gap: 12px;
-  }
-  .header-menu a {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-}
-
 .introducao-bg {
   background-color: #000000;
   color: #ffffff;
+  box-shadow: inset 0 -120px #ffffff;
 }
 
 .introducao {
@@ -119,13 +95,21 @@ img {
 
 .introducao-conteudo {
   align-self: end;
-  padding-bottom: 80px;
+  padding-bottom: 200px;
+}
+
+.introducao img {
+  object-fit: cover;
+  height: 100%;
+  border-radius: 4px;
 }
 
 .introducao h1 {
   margin-bottom: 32px;
   font-size: 64px;
   line-height: 1.125;
+  font-family: 'Poppins';
+  font-weight: 600;
 }
 
 .introducao p {
@@ -133,6 +117,8 @@ img {
   font-size: 24px;
   line-height: 1.5;
   color: #b2b2b2;
+  font-family: 'Roboto';
+  font-weight: 400;
 }
 
 .introducao a {
@@ -144,9 +130,70 @@ img {
   text-transform: uppercase;
   color: #332200;
   line-height: 1.33;
-  font-weight: bold;
+  font-family: 'Poppins';
+  font-weight: 600;
 }
 
 .introducao a:hover {
   background: linear-gradient(#ffb60d, #e59317);
+}
+
+@media (width <= 1200px) {
+  .introducao h1 {
+    font-size: 48px;
+  }
+  .introducao p {
+    font-size: 18px;
+  }
+}
+
+@media (width <= 800px) {
+  .header-menu {
+    gap: 20px;
+  }
+  .header-menu a {
+    background: #111111;
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+  .header-menu a:hover {
+    background: #2e2e2e;
+  }
+  .header a::after {
+    display: none;
+  }
+  .introducao h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .introducao {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .introducao-conteudo {
+    padding-bottom: 0px;
+  }
+  .introducao img {
+    height: 300px;
+    width: 100%;
+  }
+  .introducao-bg {
+    background: #111111;
+    padding-top: 40px;
+    box-shadow: inset 0 -60px #ffffff;
+  }
+}
+
+@media (width <= 600px) {
+  .header-menu {
+    gap: 12px;
+  }
+  .header-menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .introducao a {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
 }
